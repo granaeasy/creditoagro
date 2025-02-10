@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkTree Moderno</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(45deg, #1a5f1a, #2d8a4e, #3cb371);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 30px;
+            width: 80vw;
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 50px;
+            border-radius: 50%;
+            filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .botoes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .botao-contato {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 35px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #1a5f1a;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-100vw);
+            opacity: 0;
+            animation: slideIn 0.8s ease forwards;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .botao-contato:nth-child(even) {
+            animation-delay: 0.2s;
+            transform: translateX(100vw);
+        }
+
+        .botao-contato:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .botao-contato:hover {
+            background: #1a5f1a;
+            color: white;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .golpe {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .golpe img {
+            border-radius: 30px;
+        }
+
+        h4 {
+            color: white;
+            max-width: 50%;
+
+        }
+
+        ul {
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 30px 20px;
+                margin: 30px auto;
+            }
+
+            .botao-contato {
+                padding: 16px 25px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="/logosiccob.jpeg" alt="Logo da Empresa" class="logo">
+
+        <div class="botoes-container">
+            <a href="https://wa.me/SEUNUMERO" class="botao-contato" target="_blank">
+                Crédito Agro ( Pronamp/Pronaf )
+            </a>
+
+            <a href="mailto:SEUEMAIL@EMPRESA.COM" class="botao-contato">
+                Cartao de Crédito PJ
+            </a>
+
+            <a href="https://www.instagram.com/SEUINSTAGRAM" class="botao-contato" target="_blank">
+                Aumento e Liberação de Limite ( Clientes Ativos )
+            </a>
+        </div>
+
+        <div class="golpe">
+            <img src="/golpe.png" alt="cuidado com golpes">
+            <h4>O Banco SICOOB NUNCA SOLICITA PAGAMENTO ADIANTADO para liberação de crédito, aprovação de empréstimos ou
+                desbloqueio de valores. Desconfie de propostas que exijam:</h4>
+            <ul>
+                <li>Depósito ou transferência prévia.</li>
+                <li>Pagamento de "taxas administrativas", "seguros" ou "tarifas de liberação".</li>
+                <li> Compartilhamento de dados pessoais (senhas, token, código de segurança).</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
